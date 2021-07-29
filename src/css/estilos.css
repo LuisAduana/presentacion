@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --primary-text-color: #eafffe;
+  --acent-text-color: #386b6e;
+  --alter-text-color: #ffe2ac;
+  --primary-color: #169b92;
+  --secondary-color: #1fa59b;
+  --tertiary-color: #1fa59b;
+  --quaternary-color: #acdbcb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 1000px;
+  background-image: url('./../assets/egg-shell.png'),
+    linear-gradient(
+      to bottom,
+      var(--primary-color) 0%,
+      var(--quaternary-color) 100%
+    );
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 1s;
+}
+
+header.sticky {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  box-shadow: 20px 20px 50px #386b6e33;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+header .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+header.sticky .banner {
+  opacity: 0;
+}
+
+header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8vw;
+  font-weight: 700;
+  color: #169b92;
+  transition: 1s;
+  text-decoration: none;
+  z-index: 1;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+header.sticky .logo {
+  position: absolute;
+  font-size: 2em;
+  left: 100px;
+  color: var(--primary-text-color);
+  transform: translate(0, -50%);
+  animation: none;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #eafffe, 0 0 20px #eafffe, 0 0 30px #386b6e,
+      0 0 40px #386b6e, 0 0 50px #386b6e, 0 0 60px #386b6e, 0 0 70px #386b6e;
+  }
+
+  to {
+    text-shadow: 0 0 20px #eafffe, 0 0 30px #acdbcb, 0 0 40px #acdbcb,
+      0 0 50px #acdbcb, 0 0 60px #acdbcb, 0 0 70px #acdbcb, 0 0 80px #acdbcb;
+  }
+}
+
+nav {
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+nav ul {
+  position: relative;
+  display: flex;
+  transition: 0.25s;
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+header.sticky nav ul {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--primary-text-color);
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--acent-text-color);
+}
+
+section {
+  margin-top: 20vh;
+  padding: 100px;
+}
