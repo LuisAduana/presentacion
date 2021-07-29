@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-:root {
-  --primary-text-color: #eafffe;
-  --acent-text-color: #386b6e;
-  --alter-text-color: #ffe2ac;
-  --primary-color: #169b92;
-  --secondary-color: #1fa59b;
-  --tertiary-color: #1fa59b;
-  --quaternary-color: #acdbcb;
-}
+$primary-text-color: #eafffe;
+$acent-text-color: #386b6e;
+$alter-text-color: #ffe2ac;
+$primary-color: #169b92;
+$secondary-color: #1fa59b;
+$tertiary-color: #1fa59b;
+$quaternary-color: #acdbcb;
 
 * {
   margin: 0;
@@ -19,12 +17,8 @@
 
 body {
   min-height: 1000px;
-  background-image: url('./../assets/egg-shell.png'),
-    linear-gradient(
-      to bottom,
-      var(--primary-color) 0%,
-      var(--quaternary-color) 100%
-    );
+  background-image: url('/src/assets/egg-shell.png'),
+    linear-gradient(to bottom, $primary-color 0%, $quaternary-color 100%);
 }
 
 header {
@@ -82,7 +76,7 @@ header.sticky .logo {
   position: absolute;
   font-size: 2em;
   left: 100px;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   transform: translate(0, -50%);
   animation: none;
 }
@@ -123,7 +117,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   display: inline-block;
   padding: 10px 15px;
   font-size: 1.2em;
@@ -131,7 +125,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--acent-text-color);
+  color: $acent-text-color;
 }
 
 section {
