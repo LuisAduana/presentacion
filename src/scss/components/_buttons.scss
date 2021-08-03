@@ -1,0 +1,46 @@
+@import './../variables';
+
+.normal-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  color: $white-color;
+  font-size: $large-font-size;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $alter-text-color;
+    border-radius: 0.5rem;
+    z-index: -2;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: darken($alter-text-color, 15%);
+    transition: all 0.3s;
+    border-radius: 0.5rem;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $white-color;
+    &::before {
+      width: 100%;
+    }
+  }
+}

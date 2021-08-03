@@ -1,0 +1,44 @@
+/*========= Globals ===========*/
+$header-height: 80px;
+
+/*========= Colores ===========*/
+/* Texto */
+$primary-text-color: #f6fefd;
+$secondary-text-color: #a6dccb;
+$tertiary-text-color: #689492;
+$acent-text-color: #447876;
+$alter-text-color: #1fa59a;
+
+/* General */
+$white-color: #e0f1ee;
+$black-color: #222222;
+$primary-color: #d9ed92;
+$secondary-color: #b5e48c;
+$tertiary-color: #99d98c;
+$quaternary-color: #76c893;
+$quintinary-color: #52b69a;
+$primary-alter-color: #34a0a4;
+$secondary-alter-color: #168aad;
+$tertiary-alter-color: #1a759f;
+$quaternary-alter-color: #1e6091;
+$quintinary-alter-color: #184e77;
+
+/*========= BreakPoints ===========*/
+$xs-screen: 450px;
+$sm-screen: 990px;
+$md-screen: 1100px;
+
+/*=======Fuente y tipografía ======*/
+$body-font: 'Poppins', sans-serif;
+$large-font-size: 1.23rem;
+$normal-font-size: 1rem;
+$small-font-size: 0.875rem;
+
+/*============ z indez ============*/
+$z-fixed: 100;
+
+@media screen and (min-width: $sm-screen) {
+  $large-font-size: 1.23rem;
+  $normal-font-size: 1rem;
+  $small-font-size: 0.875rem;
+}

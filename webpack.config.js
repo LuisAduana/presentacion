@@ -5,10 +5,15 @@ module.exports = {
   mode: 'production',
   entry: './src/app.js',
   output: {
-    filename: 'main.js',
+    filename: 'app.js',
     path: path.resolve(__dirname, 'public'),
   },
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: path.join(__dirname, './src/index.html'),
+    }),
+  ],
   module: {
     rules: [
       {
